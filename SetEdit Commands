@@ -1,0 +1,129 @@
+# SetEdit Commands
+WELCOME/GREETINGS: I am pleased to have announced that you can tweak some Android settings without having yourself root and / or debug.
+Some tweaks require that you write secure settings through ADB. 
+⚠️ WARNING⚠️ 
+THESE COMMAND WORD FOR ALMOST ALL ANDROID DEVICES,
+I TAKE NO RESPONSIBILITY IN ANY DAMAGES WHATSOEVER HAPPEN TO YOUR DEVICE AND OR ANY OTHER APPLICABLE ACTION TAKEN AND OR DONE WHEN INPUTTING THE COMMANDS LISTED BELOW. 
+⚠️ If you delete the app or uninstall: you lose all your settings.⚠️
+⚠️If you do want to undo changes, just delete the setting line.⚠️
+⚠️For best experience, use all working tweaks.⚠️
+⚠️Or you can choose what you want or do not want it is up to you.⚠️
+OTA UPDATES don't affect the commands/Settings on youre device.
+and neither do they conflict with manufacturers' settings and warranty. There are some new settings lines enabled on android properties that made some of my added tweaks on system tables redundant, so I just deleted those redundant ones from the system table for you. 😏
+┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉
+1) Download the app using the link provided below:
+https://play.google.com/store/apps/details?id=by4a.setedit22
+
+2) wifi scan interval
+wifi.supplicant_scan_interval "120" increases time between WiFi scans, saves battery and CPU power.
+
+3) power savings
+pm.sleep_mode "1"
+power_supply.wakeup "enable"
+
+4) Gaming/3d performance.
+debug.enabletr "true"
+debug.qctwa.preservebuf "1"
+dev.pm.dyn_samplingrate "1"
+video.accelerate.hw "1"
+debug.overlayui.enable "1"
+debug.egl.hw "1"
+Debug.egl.prifiler "1"
+debug.sf.hw "1"
+debug.composition.type "c2d"
+debug.composition.type "gpu"
+debug.performance.tuning "1"
+
+5) Better navigation scrolling speed
+windowsmgr.max_events_per_sec "100"
+
+6) Disable fingerprint reader animation.
+fod_animation_type "4"
+
+7) disable logcat
+Logcat.live "disable"
+
+8) Enhance Sound quality
+af.resampler.quality "255"
+mpq.audio.decode "true"
+
+9) Internet browsing and download.
+net.tcp.buffersize.default "4096,87380,256960,4096, 16384,256960"
+net.tcp.buffersize.wifi "4096,87380,256960,4096,163 84,256960"
+net.tcp.buffersize.umts "4096,87380,256960,4096,163 84,256960"
+net.tcp.buffersize.gprs "4096,87380,256960,4096,163 84,256960"
+net.tcp.buffersize.edge "4096,87380,256960,4096,163 84,256960"
+net.tcp.buffersize.hspa "6144,87380,524288,6144,163 84,262144"
+net.tcp.buffersize.lte "524288,1048576,2097152,5242 88,1048576,2097152
+net.tcp.buffersize.hsdpa "6144,87380,1048576,6144,8 7380,1048576"
+net.tcp.buffersize.evdo_b "6144,87380,1048576,6144, 87380,1048576"
+net.rmnet0.dns1 "8.8.8.8"
+net.rmnet0.dns2 "8.8.4.4"
+net.dns1 "8.8.8.8"
+net.dns2 "8.8.4.4"
+net.ppp0.dns1 "8.8.8.8"
+net.ppp0.dns2 "8.8.4.4"
+net.wlan0.dns1 "8.8.8.8"
+net.wlan0.dns2 "8.8.4.4"
+net.eth0.dns1 "8.8.8.8"
+net.eth0.dns2 "8.8.4.4"
+net.gprs.dns1 "8.8.8.8"
+net.gprs.dns2 "8.8.4.4"
+
+Note
+You can use whAtever dns is faster for u for example cloud share dns1 1.1.1.1 dns2 1.0.0.1
+
+10) Enable GPU Acceleration (avoid enabling this in developer mode it resets when phone restarts)
+debug.qc.hardware "true"
+debug.qctwa.statusbar "1"
+debug.qctwa.preservebuf "1"
+debug.composition.type "gpu"
+hw3d.force "1"
+hwui.render_dirty_regions "false"
+hwui.disable_vsync "true"
+
+11) Haptic feedback
+haptic_feedback_enabled "0" 0 is off and 1 is on. 0 disables boot vibration as well.
+
+12) Touch sensitivity
+touch.presure.scale "0.001"
+debug.egl.profiler "1"
+
+13) Dalvik Virtual Machine tweaks. Better performance of device overall
+dalvik.vm.checkjni "false"
+dalvik.vm.dexopt-data-only "1"
+dalvik.vm.heapstartsize "5m"
+dalvik.vm.heapgrowthlimit "48m"
+dalvik.vm.heapsize "64m"
+dalvik.vm.verify-bytecode "false"
+dalvik.vm.execution-mode "int:jit"
+dalvik.vm.lockprof.threshold "250"
+dalvik.vm.dexopt-flags "m=v,o=y"
+dalvik.vm.stack-trace-file "/data/anr/traces.txt"
+dalvik.vm.jmiopts "forcecopy"
+
+14) Smoother video streaming and tweak media
+media.stagefright.enable-player "true"
+media.stagefright.enable-meta "true"
+media.stagefright.enable-scan "true"
+media.stagefright.enable-http "true"
+media.stagefright.enable-aac "true"
+media.stagefright.enable-qcp "true"
+media.stagefright.enable-record "true"
+
+15) Wireless Tweaks
+net.ipv4.ip_no_pmtu_disc=0
+net.ipv4.route.flush=1
+net.ipv4.tcp_ecn=0
+net.ipv4.tcp_fack=1
+net.ipv4.tcp_mem=187000 187000 187000
+net.ipv4.tcp_moderate_rcvbuf=1
+net.ipv4.tcp_no_metrics_save=1
+net.ipv4.tcp_rfc1337=1
+net.ipv4.tcp_rmem=4096 39000 187000
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_timestamps=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_wmem=4096 39000 18700
+18. This removes fps cap (TRY AT YOUR OWN RISK) I run this doh it's fine.
+debug.gr.swapinterval "0"
